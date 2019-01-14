@@ -12,6 +12,7 @@
 </head>
 <body>
 <div>my image</div>
-<img src="E:\MaYunProject\SpringFrameWork\tbweb\src\main\webapp\WEB-INF\picture\beauty.gif"/>
+<img src="/WEB-INF/picture/beauty.gif"/>
+
 </body>
 </html>
