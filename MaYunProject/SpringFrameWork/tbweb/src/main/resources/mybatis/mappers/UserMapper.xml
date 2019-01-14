@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+	namespace="它是映射文件的唯一标识"
+	mapper接口调用方式,表明 mapper接口/映射文件/表映射关系
+  -->
+<mapper namespace="com.jt.dao.UserDao">
+
+    <!--
+        mysql:  没有任何影响
+        oracle: ;不能正确识别
+        resultType:之后配置别名包
+      -->
+    <select id="findPageObject" resultType="com.jt.pojo.User">
+
+		select * from user limit #{startIndex},#{pageSize}
+    </select>
+    <select id="findUserInfo" resultType="com.jt.pojo.UserInfo" parameterType="com.jt.pojo.UserInfo">
+
+		select * from userinfo where name = #{name} and password = #{password}
+
+	</select>
+
+
+</mapper>
