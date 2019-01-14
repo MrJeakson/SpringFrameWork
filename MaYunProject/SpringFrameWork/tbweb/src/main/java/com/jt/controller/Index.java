@@ -19,5 +19,11 @@ public class Index {
 
         return "ajaxTest";
     }
+    
+    @RequestMapping("/doHello")
+    public String doHello(){
+        
+        return "hello";
+        }
 
 }
